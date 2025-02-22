@@ -17,13 +17,10 @@ function App() {
             key={path}
             path={path}
             element={
-              <Layout>
-                {path === "/" ? <Dashboard /> : <RideHistory />}
-              </Layout>
+              <Layout>{path === "/" ? <Dashboard /> : <RideHistory />}</Layout>
             }
           />
         ))}
-
 
         <Route path="*" element={<NotFound />} />
       </Routes>

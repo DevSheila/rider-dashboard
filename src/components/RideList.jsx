@@ -1,5 +1,8 @@
 import RideCard from "./RideCard";
 
+// Props:
+// - rides: An array of ride objects
+// - onBook: A function to handle ride booking
 const RideList = ({ rides, onBook }) => {
   if (rides.length === 0) {
     return <p className="text-center text-gray-500">No rides available.</p>;
@@ -8,7 +11,7 @@ const RideList = ({ rides, onBook }) => {
   return (
     <div className="max-h-96 overflow-y-auto flex flex-col border rounded-lg p-4">
       {rides.map((ride) => (
-        <RideCard key={ride.id} ride={ride} onBook={onBook} />
+        <RideCard key={ride.id} ride={ride} onBook={onBook} /> 
       ))}
     </div>
   );
