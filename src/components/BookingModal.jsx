@@ -8,7 +8,13 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
+// Props:
+// - ride: ride details (null or object)
+// - onConfirm: function to handle booking confirmation
+// - onCancel: function to handle booking cancellation
+// - isBooking: boolean indicating if booking is in progress
 const BookingModal = ({ ride, onConfirm, onCancel, isBooking }) => {
+  
   return (
     <Dialog open={!!ride} onOpenChange={onCancel}>
       {ride && (
@@ -18,8 +24,14 @@ const BookingModal = ({ ride, onConfirm, onCancel, isBooking }) => {
           </DialogTitle>
 
           <DialogDescription className="text-gray-600">
-            You are booking a ride with <strong>{ride.driver}</strong>. The fare
-            is <strong>${ride.fare}</strong>.
+            <p>
+              You are booking a ride with <strong>
+                {ride.driver.name}
+              </strong>.
+            </p>
+            <p>
+              The fare is <strong>KES {ride.rideModels.fare}</strong>.
+            </p>
           </DialogDescription>
           <DialogFooter>
             <Button variant="outline" onClick={onCancel}>

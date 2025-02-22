@@ -3,10 +3,10 @@ const SearchBar = ({ search, onSearch }) => {
   return (
     <Input
       type="text"
-      placeholder="Search by driver..."
+      placeholder="Search ..."
       value={search}
       onChange={(e) => onSearch(e.target.value)}
-      className="mb-4 "
+      className="mb-4 dark:outline"
     />
   );
 };
