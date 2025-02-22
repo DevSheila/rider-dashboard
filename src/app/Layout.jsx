@@ -18,7 +18,7 @@ const Layout = ({ children, isLoading, isEmpty }) => {
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col bg-gray-100 dark:bg-gray-900 overflow-y-auto ml-64"> 
         {/* Add `ml-64` to prevent overlapping */}
-        <main className="p-6 flex flex-col items-center justify-center">
+        <main className="flex flex-col items-center justify-center">
           {isLoading && !showContent ? (
             <div className="flex items-center space-x-4">
               <Skeleton className="h-12 w-12 rounded-full" />

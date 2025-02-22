@@ -18,8 +18,8 @@ const BookingModal = ({ ride, onConfirm, onCancel, isBooking }) => {
           </DialogTitle>
 
           <DialogDescription className="text-gray-600">
-            You are booking a ride with <strong>{ride.driver}</strong>. The fare
-            is <strong>${ride.fare}</strong>.
+            You are booking a ride with <strong>{ride.driver.name}</strong>. The fare
+            is <strong>KES{ride.fare}</strong>.
           </DialogDescription>
           <DialogFooter>
             <Button variant="outline" onClick={onCancel}>

@@ -5,9 +5,9 @@ const RideList = ({ rides, onBook }) => {
     return <p className="text-center text-gray-500">No rides available.</p>;
   }
 
-  return ( 
-    <div className="grid md:grid-cols-2 gap-4">
-      {rides.map(ride => (
+  return (
+    <div className="max-h-96 overflow-y-auto flex flex-col border rounded-lg p-4">
+      {rides.map((ride) => (
         <RideCard key={ride.id} ride={ride} onBook={onBook} />
       ))}
     </div>

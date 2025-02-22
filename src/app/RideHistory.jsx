@@ -17,9 +17,9 @@ const RideHistory = () => {
         <ul className="space-y-4">
           {rides.map((ride) => (
             <li key={ride.id} className="border p-4 rounded-lg shadow">
-              <p><strong>Driver:</strong> {ride.driver}</p>
+              <p><strong>Driver:</strong> {ride.driver.name}</p>
               <p><strong>Car:</strong> {ride.car}</p>
-              <p><strong>Fare:</strong> ${ride.fare}</p>
+              <p><strong>Fare:</strong> KES{ride.fare}</p>
               <p><strong>Distance:</strong> {ride.distance} km</p>
               <p><strong>Date:</strong> {new Date(ride.date).toLocaleString()}</p>
               <p><strong>Status:</strong> {ride.status}</p>
